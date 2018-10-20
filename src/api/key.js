@@ -1,0 +1,1 @@
+export const pexelsKey = 'Bearer 563492ad6f9170000100000137a7839c7264487bb399825ef4d654bb'
