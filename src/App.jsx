@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import { getImages } from './api/pexels';
 import { Grid, Row, Col, Image, Pager } from 'react-bootstrap';
 
+import Searchbar from './components/Searchbar';
+
 class App extends Component {
     constructor(props){
         super(props);
@@ -14,7 +16,7 @@ class App extends Component {
     }
 
     componentDidMount(){
-        this.getImagesFromApi('https://api.pexels.com/v1/search?query=sunset+query&per_page=15&page=1');
+        this.getImagesFromApi('https://api.pexels.com/v1/search?query=switzerland+query&per_page=15&page=1');
     }
 
    async getImagesFromApi(url){
@@ -33,6 +35,8 @@ class App extends Component {
     return (
     <div className="App">
         <header className="App-header">
+        <Searchbar search ={ this.getImagesFromApi} />
+        </header>
             <Grid>
             <Row>
                 {images.length > 0 ? 
@@ -48,7 +52,6 @@ class App extends Component {
                     : null}
             </Row>
             </Grid>
-        </header>
         <Pager>
              {paginationPrevious ? <Pager.Item onClick= { () => this.getImagesFromApi(paginationPrevious) }>Previous</Pager.Item> : null}
              {paginationNext ? <Pager.Item onClick={ () => this.getImagesFromApi(paginationNext) }>Next</Pager.Item> : null}
