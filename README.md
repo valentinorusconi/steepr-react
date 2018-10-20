@@ -8,6 +8,6 @@
 
 #### You also can build and bundle the project with the following command:
 
-* npm build
+* npm run build
 
 #### This will give You an /dist folder with the bundled application.
