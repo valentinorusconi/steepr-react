@@ -1,6 +1,11 @@
 
 ## Steepr react version
 
+#### Requirements:
+
+* node installed: https://nodejs.org/en/
+* npm installed: https://www.npmjs.com/
+
   #### to start this application run following commands in the root path in the given order:
 
  * npm install (to install dependencies)
